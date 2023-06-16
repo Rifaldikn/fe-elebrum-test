@@ -1,9 +1,14 @@
-<script setup></script>
+<script setup>
+import Carousel from "./CarouselSection.vue";
+</script>
+
 <template>
   <v-container class="fill-height pa-0" fluid>
-    <v-row class="fill-height">
+    <v-row class="fill-height" no-gutters>
       <v-col cols="3" class="bg-primary">
-        <v-card max-width="640px"> </v-card>
+        <v-card max-width="640px" height="100%">
+          <Carousel style="height: 100%" />
+        </v-card>
       </v-col>
       <v-col cols="9" style="padding: 50px 100px 0px 100px">
         <v-row class="my-5">
@@ -32,6 +37,7 @@
               placeholder="e.g John"
               variant="outlined"
               density="compact"
+              class="mr-5"
               single-line
             ></v-text-field>
           </v-col>
@@ -52,6 +58,7 @@
               placeholder="e.g john.doe@mail.com"
               variant="outlined"
               density="compact"
+              class="mr-5"
               single-line
             ></v-text-field>
           </v-col>
@@ -89,6 +96,8 @@
               placeholder="Insert Password"
               variant="outlined"
               density="compact"
+              class="mr-5"
+              append-inner-icon="mdi-eye-off-outline"
               single-line
             ></v-text-field>
           </v-col>
@@ -99,6 +108,7 @@
               placeholder="Confirm Password"
               variant="outlined"
               density="compact"
+              append-inner-icon="mdi-eye-off-outline"
               single-line
             ></v-text-field>
           </v-col>
@@ -111,7 +121,9 @@
               hide-details
             >
               <template v-slot:label>
-                <div>Yes I want to receive Axdif’s Newsletter</div>
+                <div class="text-black">
+                  Yes I want to receive Axdif’s Newsletter
+                </div>
               </template>
             </v-checkbox>
 
@@ -122,7 +134,7 @@
               hide-details
             >
               <template v-slot:label>
-                <div>
+                <div class="text-black">
                   I have read and accept the
                   <span>
                     <a class="text-secondary font-weight-bold" variant="text">
@@ -144,11 +156,12 @@
               class="text-capitalize"
               size="large"
               variant="flat"
+              rounded="lg"
               >Submit</v-btn
             >
           </v-col>
 
-          <v-col>
+          <v-col class="py-15" style="position: absolute; bottom: 0px">
             <div>© Copyright 2023. All Right Reserved.</div>
           </v-col>
         </v-row>
