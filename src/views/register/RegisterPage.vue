@@ -1,5 +1,10 @@
 <script setup>
+import { ref } from "vue";
 import Carousel from "./CarouselSection.vue";
+import RegisterForm from "./RegisterForm.vue";
+import SuccessRegister from "./RegisterSuccessContent.vue";
+
+const successRegister = ref(false);
 </script>
 
 <template>
@@ -10,8 +15,25 @@ import Carousel from "./CarouselSection.vue";
           <Carousel style="height: 100%" />
         </v-card>
       </v-col>
-      <v-col cols="9" style="padding: 50px 100px 0px 100px">
-        <component :is=""></component>
+      <v-col cols="9" style="padding: 30px 5% 0px 5%">
+        <v-row justify="start" class="my-5">
+          <v-col cols="auto">
+            <v-img height="68px" src="@/assets/images/logo-axdif.svg"></v-img>
+          </v-col>
+
+          <v-col cols="12">
+            <RegisterForm
+              v-if="!successRegister"
+              @success-submit="successRegister = true"
+            ></RegisterForm>
+
+            <SuccessRegister v-else />
+          </v-col>
+
+          <v-col class="py-15" style="position: absolute; bottom: 0px">
+            <div>© Copyright 2023. All Right Reserved.</div>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
