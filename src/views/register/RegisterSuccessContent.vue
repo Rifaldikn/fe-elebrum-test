@@ -76,6 +76,7 @@ const steps = [
         rounded="lg"
         variant="flat"
         size="large"
+        :to="{ name: 'Login' }"
       >
         Login to Axdif
       </v-btn>

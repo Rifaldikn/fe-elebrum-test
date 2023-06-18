@@ -9,7 +9,13 @@ const routes = [
     children: [
       {
         path: "/registration",
+        name: "Register",
         component: () => import("@/views/register/RegisterPage.vue"),
+      },
+      {
+        path: "/login",
+        name: "Login",
+        component: () => import("@/views/auth/LoginPage.vue"),
       },
     ],
   },
