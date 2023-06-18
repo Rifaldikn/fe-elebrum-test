@@ -57,18 +57,18 @@ const carouselContents = [
   >
     <swiper-slide v-for="item in carouselContents" :key="item.subtitle">
       <v-img :src="Masking" height="100vh" cover>
-        <v-row class="fill-height justify-center text-center pa-10">
-          <v-col cols="12">
-            <div class="text-h4 font-weight-bold" style="margin-top: 10%">
+        <v-row
+          class="justify-center align-space-between text-center pa-10 fill-height"
+        >
+          <v-col cols="12" class="my-auto">
+            <div class="text-h4 font-weight-bold mb-15">
               {{ item.title }}
             </div>
-          </v-col>
 
-          <v-col cols="12">
-            <v-img :src="item.img" height="300"></v-img>
-          </v-col>
+            <div class="mb-10">
+              <v-img :src="item.img" height="300px"></v-img>
+            </div>
 
-          <v-col>
             <div class="text-h5 font-weight-bold mb-5">{{ item.subtitle }}</div>
             <div class="text-subtitle-1">{{ item.description }}</div>
           </v-col>
@@ -95,5 +95,9 @@ const carouselContents = [
   height: 16px;
   border-radius: 12px;
   opacity: 1;
+}
+
+.swiper-pagination {
+  margin-bottom: 50px;
 }
 </style>

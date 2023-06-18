@@ -67,5 +67,18 @@ const steps = [
         </v-col>
       </v-row>
     </v-col>
+
+    <v-col cols="12" class="d-flex justify-center">
+      <v-btn
+        color="error"
+        class="text-capitalize"
+        width="215px"
+        rounded="lg"
+        variant="flat"
+        size="large"
+      >
+        Login to Axdif
+      </v-btn>
+    </v-col>
   </v-row>
 </template>

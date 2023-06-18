@@ -10,7 +10,7 @@ const successRegister = ref(false);
 <template>
   <v-container class="fill-height pa-0" fluid>
     <v-row class="fill-height" no-gutters>
-      <v-col cols="3" class="bg-primary">
+      <v-col cols="3">
         <v-card max-width="640px" height="100%" color="blue">
           <Carousel style="height: 100%" />
         </v-card>
