@@ -30,7 +30,7 @@ const successRegister = ref(false);
             <SuccessRegister v-else />
           </v-col>
 
-          <v-col class="py-15" style="position: absolute; bottom: 0px">
+          <v-col cols="12" style="position: static; bottom: 0px">
             <div>© Copyright 2023. All Right Reserved.</div>
           </v-col>
         </v-row>

@@ -25,7 +25,7 @@ import Ilustration from "@/assets/images/login/ilustration.png";
           </v-img>
         </v-card>
       </v-col>
-      <v-col cols="4" class="">
+      <v-col cols="4">
         <LoginForm />
       </v-col>
     </v-row>
