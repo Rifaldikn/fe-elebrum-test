@@ -19,9 +19,9 @@ const formValid = ref(false);
 </script>
 
 <template>
-  <v-form v-model="formValid">
-    <v-row style="padding: 30px">
-      <v-col cols="auto" class="my-10">
+  <v-form v-model="formValid" style="height: 100vh; overflow: auto">
+    <v-row style="padding: 50px">
+      <v-col cols="auto" class="my-5">
         <v-img height="68px" src="@/assets/images/logo-axdif.svg"></v-img>
       </v-col>
 
@@ -139,8 +139,13 @@ const formValid = ref(false);
               :disabled="!formValid"
               :to="{}"
               block
+              :to="{ name: 'Dashboard' }"
               >login</v-btn
             >
+          </v-col>
+
+          <v-col class="d-flex justify-center subtitle-2 font-weight-light">
+            <div><a> Privacy Policy</a> • <a>Terms & Condition</a></div>
           </v-col>
         </v-row>
       </v-col>
