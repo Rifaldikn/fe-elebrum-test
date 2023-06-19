@@ -137,11 +137,10 @@ const formValid = ref(false);
               rounded="lg"
               size="large"
               :disabled="!formValid"
-              :to="{}"
               block
               :to="{ name: 'Dashboard' }"
-              >login</v-btn
-            >
+              >login
+            </v-btn>
           </v-col>
 
           <v-col class="d-flex justify-center subtitle-2 font-weight-light">
