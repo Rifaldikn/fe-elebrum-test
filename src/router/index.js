@@ -17,6 +17,21 @@ const routes = [
         name: "Login",
         component: () => import("@/views/auth/LoginPage.vue"),
       },
+      {
+        path: "admin",
+        name: "Admin",
+        meta: {
+          needAuth: true,
+        },
+        component: () => import("@/layouts/admin/AdminLayout.vue"),
+        children: [
+          {
+            path: "",
+            name: "Dashboard",
+            component: () => import("@/views/dashboard/DashboardPage.vue"),
+          },
+        ],
+      },
     ],
   },
   {
