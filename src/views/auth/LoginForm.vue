@@ -37,11 +37,15 @@ const formValid = ref(false);
               color="grey"
               height="50px"
               variant="outlined"
-              class="text-capitalize"
+              class="text-capitalize font-weight-bold"
               rounded="lg"
               block
             >
-              Google
+              <template #prepend>
+                <v-img src="@/assets/icons/google.png" height="24px"></v-img>
+              </template>
+
+              <div class="text-black">Google</div>
             </v-btn>
           </v-col>
           <v-col>
@@ -49,11 +53,15 @@ const formValid = ref(false);
               color="grey"
               height="50px"
               variant="outlined"
-              class="text-capitalize"
+              class="text-capitalize font-weight-bold text-"
               rounded="lg"
+              left
               block
             >
-              Linked In
+              <template #prepend>
+                <v-img src="@/assets/icons/linkedin.png" height="24px"></v-img>
+              </template>
+              <div class="text-black">Linked In</div>
             </v-btn>
           </v-col>
 
@@ -94,13 +102,9 @@ const formValid = ref(false);
               :rules="rules.password"
               :type="!isPasswordHidden ? 'text' : 'password'"
               :append-inner-icon="
-                !isPasswordHidden
-                  ? 'mdi-eye-outline'
-                  : 'mdi-eye-off-outline'
+                !isPasswordHidden ? 'mdi-eye-outline' : 'mdi-eye-off-outline'
               "
-              @click:append-inner="
-                isPasswordHidden = !isPasswordHidden
-              "
+              @click:append-inner="isPasswordHidden = !isPasswordHidden"
             ></v-text-field>
           </v-col>
 
@@ -133,6 +137,7 @@ const formValid = ref(false);
               rounded="lg"
               size="large"
               :disabled="!formValid"
+              :to="{}"
               block
               >login</v-btn
             >
