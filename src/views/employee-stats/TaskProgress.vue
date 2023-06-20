@@ -33,7 +33,7 @@ const options = {
       </v-col>
 
       <v-col cols="12">
-        <Pie :data="data" :options="options" />
+        <Pie :data="data" :options="options" style="height: 350px;" />
       </v-col>
     </v-row>
   </v-card>

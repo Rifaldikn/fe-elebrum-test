@@ -1,4 +1,65 @@
 <script setup>
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+} from "chart.js";
+import { Line } from "vue-chartjs";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
+
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  datasets: [
+    {
+      label: "Data One",
+      backgroundColor: "rgb(219, 241, 251)",
+      data: [40, 39, 10, 40, 39, 80, 40],
+      borderColor: "#0796E5",
+      fill: "start",
+    },
+  ],
+};
+
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  radius: 5,
+  pointBackgroundColor: "#fff",
+  elements: {
+    line: {
+      tension: 0.3,
+    },
+  },
+  interaction: {
+    intersect: false,
+  },
+  plugins: {
+    filler: {
+      propagate: true,
+    },
+    legend: {
+      position: "top",
+      align: "end",
+    },
+  },
+};
+
 const cardData = {
   completed: {
     value: 2400,
@@ -30,7 +91,14 @@ const cardData = {
         <div class="text-grey text-h6">Task Completion in All Project</div>
       </v-col>
 
-      <v-col cols="12"> </v-col>
+      <v-col cols="12">
+        <Line
+          :options="options"
+          :data="data"
+          ref="chartInstance"
+          style="height: 200px"
+        />
+      </v-col>
 
       <v-col cols="12">
         <v-row>
