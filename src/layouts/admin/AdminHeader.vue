@@ -11,7 +11,7 @@ const appNavigationRoutes = ref([
   },
   {
     title: "Employee Stats",
-    route: "/#",
+    route: "/employee-stats",
   },
   {
     title: "Submission",

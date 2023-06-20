@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import { VDatePicker } from "vuetify/labs/VDatePicker";
 
 import moment from "moment";
 import idLocale from "moment/locale/id";
