@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "chart.js": "^4.3.0",
     "core-js": "^3.29.0",
     "maska": "^2.1.9",
     "moment": "^2.29.4",
@@ -17,6 +18,7 @@
     "roboto-fontface": "*",
     "swiper": "^9.4.1",
     "vue": "^3.2.0",
+    "vue-chartjs": "^5.2.0",
     "vue-cookies": "^1.8.3",
     "vue-router": "^4.0.0",
     "vuetify": "~3.3.4",

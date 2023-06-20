@@ -39,7 +39,7 @@ const months = ref(moment.months("MMM"));
             <v-card class="pa-5" width="250">
               <v-row dense align="center" justify="space-around">
                 <v-col cols="4">
-                  <v-icon @click="">mdi-chevron-left</v-icon>
+                  <v-icon>mdi-chevron-left</v-icon>
                 </v-col>
                 <v-col cols="4">
                   <div class="font-weight-bold text-primary text-center">
@@ -47,7 +47,7 @@ const months = ref(moment.months("MMM"));
                   </div>
                 </v-col>
                 <v-col cols="4" class="text-end">
-                  <v-icon @click="">mdi-chevron-right</v-icon>
+                  <v-icon>mdi-chevron-right</v-icon>
                 </v-col>
               </v-row>
               <v-row dense>
