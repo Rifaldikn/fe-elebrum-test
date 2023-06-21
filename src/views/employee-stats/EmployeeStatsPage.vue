@@ -53,21 +53,19 @@ const yearFilter = ref(2022);
         </v-row>
       </v-col>
 
-      <v-col cols="8">
+      <v-col cols="12" md="8">
         <AttendanceSummary />
       </v-col>
 
-      <v-col cols="4">
+      <v-col cols="6" md="4">
         <AttendanceCompleteness />
       </v-col>
-    </v-row>
 
-    <v-row>
-      <v-col cols="4">
+      <v-col cols="6" md="4">
         <TaskProgress />
       </v-col>
 
-      <v-col cols="8">
+      <v-col cols="12" md="8">
         <TaskCompletion />
       </v-col>
     </v-row>

@@ -10,7 +10,7 @@ const profileData = ref({
 </script>
 
 <template>
-  <v-card variant="flat" max-width="597px" border>
+  <v-card variant="flat" border>
     <v-img cover height="150" src="@/assets/images/profile_banner.png"></v-img>
 
     <div class="text-center mb-5" style="margin-top: -60px">

@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+import { useDisplay } from "vuetify";
 
+const { mdAndUp } = useDisplay();
 const route = useRoute();
 
 const appNavigationRoutes = ref([
@@ -177,13 +179,14 @@ const isChildRouteActive = ({ children }) => {
       class="pa-5"
       style="z-index: 9999; box-shadow: 0px 15px 24px #00000012 !important"
     >
-      <v-row style="padding: 0px 140px 30px 140px">
+      <v-row :style="{ padding: mdAndUp ? '0px 140px 30px 140px' : '' }">
         <v-col cols="12" class="text-h5 text-blue font-weight-bold">
           {{ selectedMenu.title }}
         </v-col>
         <v-divider></v-divider>
         <v-col
-          cols="3"
+          md="3"
+          cols="6"
           v-for="child in selectedMenu.children"
           :key="child.title"
         >

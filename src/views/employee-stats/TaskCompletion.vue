@@ -85,7 +85,7 @@ const cardData = {
 </script>
 
 <template>
-  <v-card class="pa-5" height="450px" flat border>
+  <v-card class="pa-5" height="100%" flat border>
     <v-row>
       <v-col cols="12">
         <div class="text-grey text-h6">Task Completion in All Project</div>
@@ -103,7 +103,7 @@ const cardData = {
       <v-col cols="12">
         <v-row>
           <v-col v-for="(data, key) in cardData" :key="key" cols="3">
-            <v-card class="pa-5 text-center" flat border>
+            <v-card class="pa-5 text-center" height="100%" flat border>
               <div class="text-grey text-subtitle-2">{{ data.label }}</div>
               <div class="text-h6 font-weight-bold mt-3">{{ data.value }}</div>
               <div class="text-subtitle-2 font-weight-regular">

@@ -9,6 +9,12 @@ const monthPicker = ref(false);
 const dateFilter = ref(moment().format("MMMM YYYY"));
 const yearFilter = ref(moment().year());
 const months = ref(moment.months("MMM"));
+
+// const summaryData = ref({
+//   workingDay:{
+//     value:""
+//   }
+// })
 </script>
 
 <template>
@@ -36,7 +42,7 @@ const months = ref(moment.months("MMM"));
               </v-text-field>
             </template>
 
-            <v-card class="pa-5" width="250">
+            <v-card class="pa-5" width="250" height="100%">
               <v-row dense align="center" justify="space-around">
                 <v-col cols="4">
                   <v-icon>mdi-chevron-left</v-icon>
@@ -72,43 +78,43 @@ const months = ref(moment.months("MMM"));
       <v-col cols="12">
         <v-divider></v-divider>
       </v-col>
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Working Day(s)</div>
           <div class="font-weight-bold text-h5">2 Hari</div>
         </v-card>
       </v-col>
 
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Working Hour(s)</div>
           <div class="font-weight-bold text-h5">13 hr 14 min</div>
         </v-card>
       </v-col>
 
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Exceptional Attendance</div>
           <div class="font-weight-bold text-h5">0 Hari</div>
         </v-card>
       </v-col>
 
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Leave Taken</div>
           <div class="font-weight-bold text-h5">0 Hari</div>
         </v-card>
       </v-col>
 
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Overtime</div>
           <div class="font-weight-bold text-h5">00 hr 00 min</div>
         </v-card>
       </v-col>
 
-      <v-col cols="4">
-        <v-card border flat class="pa-5">
+      <v-col cols="6" md="4">
+        <v-card height="100%" border flat class="pa-5">
           <div class="text-grey text-subtitle-1">Claim</div>
           <div class="font-weight-bold text-h5">IDR 0</div>
         </v-card>

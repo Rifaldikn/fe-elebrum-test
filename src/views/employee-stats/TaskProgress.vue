@@ -26,14 +26,14 @@ const options = {
 </script>
 
 <template>
-  <v-card class="pa-5" height="450px" flat border>
+  <v-card class="pa-5" height="100%" flat border>
     <v-row>
       <v-col cols="12">
         <div class="text-grey text-h6">Overall Task Progress</div>
       </v-col>
 
       <v-col cols="12">
-        <Pie :data="data" :options="options" style="height: 350px;" />
+        <Pie :data="data" :options="options" style="height: 350px" />
       </v-col>
     </v-row>
   </v-card>
