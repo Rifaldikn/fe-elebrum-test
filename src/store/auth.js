@@ -2,7 +2,7 @@
 import cookies from "vue-cookies";
 import { defineStore } from "pinia";
 
-export const useAppStore = defineStore("auth", {
+export const useAuthStore = defineStore("auth", {
   state: () => ({
     userInfo: {
       name: "",
@@ -13,6 +13,9 @@ export const useAppStore = defineStore("auth", {
   actions: {
     setAuthToken(payload) {
       cookies.set("userToken", payload);
+    },
+    register(payload) {
+      cookies.set("users", payload);
     },
   },
 });

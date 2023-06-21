@@ -3,6 +3,9 @@ import { ref } from "vue";
 import { required, minLength, samePass, email } from "@/helpers/inputeRules";
 import { MIN_PASSWORD_LENGTH } from "@/helpers/variables";
 import { vMaska } from "maska";
+import { useAuthStore } from "@/store/auth";
+
+const store = useAuthStore();
 
 const phoneNumberMask = { mask: "### ##### ####" };
 const countryCodeMask = { mask: "+##" };
@@ -12,6 +15,7 @@ const emit = defineEmits(["successSubmit", "submit"]);
 const submit = () => {
   try {
     emit("successSubmit");
+    store.register(form.value);
   } catch (error) {
     console.error(error);
   }

@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { required, email } from "@/helpers/inputeRules";
+import { useAuthStore } from "@/store/auth";
+
+const store = useAuthStore();
 
 const form = ref({
   email: null,
@@ -16,11 +19,16 @@ const rules = ref({
 const isPasswordHidden = ref(true);
 
 const formValid = ref(false);
+
+const login = () => {
+  store.setAuthToken(form.value);
+  window.location.replace("/");
+};
 </script>
 
 <template>
   <v-form v-model="formValid" style="height: 100vh; overflow: auto">
-    <v-row style="padding: 50px">
+    <v-row style="padding: 50px" no-gutters>
       <v-col cols="auto" class="my-5">
         <v-img height="68px" src="@/assets/images/logo-axdif.svg"></v-img>
       </v-col>
@@ -138,7 +146,7 @@ const formValid = ref(false);
               size="large"
               :disabled="!formValid"
               block
-              :to="{ name: 'Dashboard' }"
+              @click="login()"
               >login
             </v-btn>
           </v-col>

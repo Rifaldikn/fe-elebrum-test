@@ -9,11 +9,11 @@ const route = useRoute();
 const appNavigationRoutes = ref([
   {
     title: "Overview",
-    route: "/admin",
+    route: "/",
   },
   {
     title: "Employee Stats",
-    route: "/admin/employee-stats",
+    route: "/employee-stats",
   },
   {
     title: "Submission",
@@ -22,69 +22,69 @@ const appNavigationRoutes = ref([
         title: "Exc. Attendance",
         description: "Report your special absences to get an exception",
         img: "Group 659.svg",
-        route: "/",
+        route: "/a",
       },
       {
         title: "Leave",
         description:
           "Submit your leave request here. Don’t forget to pay attention to the quota",
-        route: "/",
+        route: "/b",
         img: "Group 663.svg",
       },
       {
         title: "Overtime Requisition",
         description:
           "Submit your overtime request here. Use your overtime efficiently",
-        route: "/",
+        route: "/c",
         img: "Icon - Overtime Requisition - 24px-1.svg",
       },
       {
         title: "Overtime",
         description:
           "Report your overtime here. So that your working time is not in vain",
-        route: "/",
+        route: "/d",
         img: "Group 661.svg",
       },
       {
         title: "Claim",
         description:
           "Submit your reimbursement here. Complete the submission file",
-        route: "/",
+        route: "/e",
         img: "Group 663.svg",
       },
       {
         title: "Business Trip",
         description:
           "Submit your business trip here. Complete the submission file",
-        route: "/",
+        route: "/f",
         img: "Group 5016.svg",
       },
       {
         title: "Cash Advance",
         description:
           "Submit your multilevel reimbursement here. Complete the submission file",
-        route: "/",
+        route: "/g",
         img: "Icon - Overtime Requisition - 24px-1.svg",
       },
       {
         title: "Approval",
         description: "Do all the approval process for your team here",
-        route: "/",
+        route: "/h",
         img: "Icon - Approval - 24px.svg",
       },
     ],
   },
   {
     title: "Task",
-    route: "/#",
+    route: "/task",
   },
   {
     title: "Chat",
-    route: "/#",
+    route: "/chat",
   },
   {
     title: "Payroll",
-    route: "/#",
+    route: "/payroll",
   },
 ]);
 
