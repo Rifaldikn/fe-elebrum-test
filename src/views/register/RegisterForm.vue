@@ -65,21 +65,20 @@ const rules = ref({
 
   <v-col>
     <v-form v-model="formValid">
-      <v-row dense>
-        <v-col cols="6">
+      <v-row>
+        <v-col cols="12" md="6">
           <div class="font-weight-bold">Company Name</div>
           <v-text-field
             v-model="form.companyName"
             placeholder="e.g John"
             variant="outlined"
             density="compact"
-            class="mr-5"
             :rules="rules.companyName"
             single-line
           ></v-text-field>
         </v-col>
 
-        <v-col cols="6">
+        <v-col cols="12" md="6">
           <div class="font-weight-bold">Fullname</div>
           <v-text-field
             placeholder="e.g Doe"
@@ -90,25 +89,24 @@ const rules = ref({
           ></v-text-field>
         </v-col>
 
-        <v-col cols="6">
+        <v-col cols="12" md="6">
           <div class="font-weight-bold">Email</div>
           <v-text-field
             v-model="form.email"
             placeholder="e.g john.doe@mail.com"
             variant="outlined"
             density="compact"
-            class="mr-5"
             :rules="rules.email"
             single-line
           ></v-text-field>
         </v-col>
 
-        <v-col class="d-flex">
+        <v-col cols="12" md="6" class="d-flex">
           <v-row no-gutters>
             <v-col cols="12">
               <div class="font-weight-bold">Phone Number (Optional)</div>
             </v-col>
-            <v-col cols="3">
+            <v-col cols="4" md="3">
               <v-text-field
                 v-maska:[countryCodeMask]
                 v-model="form.countryCode"
@@ -121,7 +119,7 @@ const rules = ref({
               ></v-text-field>
             </v-col>
 
-            <v-col cols="9">
+            <v-col cols="8" md="9">
               <v-text-field
                 v-maska:[phoneNumberMask]
                 v-model="form.phoneNumber"
@@ -136,14 +134,13 @@ const rules = ref({
           </v-row>
         </v-col>
 
-        <v-col cols="6">
+        <v-col cols="12" md="6">
           <div class="font-weight-bold">Password</div>
           <v-text-field
             v-model="form.password"
             placeholder="Insert Password"
             variant="outlined"
             density="compact"
-            class="mr-5"
             :type="passwordIcon.password ? 'text' : 'password'"
             :append-inner-icon="
               passwordIcon.password ? 'mdi-eye-outline' : 'mdi-eye-off-outline'
@@ -154,7 +151,7 @@ const rules = ref({
           ></v-text-field>
         </v-col>
 
-        <v-col cols="6">
+        <v-col cols="12" md="6">
           <div class="font-weight-bold">Confirm Password</div>
           <v-text-field
             v-model="form.confirmPassword"

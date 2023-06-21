@@ -107,7 +107,7 @@ const isChildRouteActive = ({ children }) => {
     elevation="0"
     style="box-shadow: 0px 1px 2px #00000029 !important"
     height="80"
-    class="app-bar"
+    id="app-bar"
     app
   >
     <template #prepend>
@@ -238,17 +238,18 @@ const isChildRouteActive = ({ children }) => {
     </template>
   </v-app-bar>
 
-  <v-dialog
+  <v-menu
     v-model="showExtendMenu"
     @update:model-value="(event) => (showExtendMenu = event)"
-    absolute
+    style="position: fixed"
+    attach=".v-main"
     scrim
   >
     <v-card
       v-if="showExtendMenu"
       elevation="0"
       class="pa-5"
-      style="z-index: 9999; box-shadow: 0px 15px 24px #00000012 !important"
+      style="z-index: 9999; box-shadow: 0px 15px 24px #00000012 !important; top: 21px"
     >
       <v-row :style="{ padding: mdAndUp ? '0px 140px 30px 140px' : '' }">
         <v-col cols="12" class="text-h5 text-blue font-weight-bold">
@@ -275,7 +276,7 @@ const isChildRouteActive = ({ children }) => {
         </v-col>
       </v-row>
     </v-card>
-  </v-dialog>
+  </v-menu>
 </template>
 
 <style scoped>

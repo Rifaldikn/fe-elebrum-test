@@ -20,7 +20,7 @@ import Profile from "./ProfileSection.vue";
 
       <v-col cols="12" md="4">
         <v-row>
-          <v-col cols="12">
+          <v-col cols="12" class="order-sm-first">
             <Profile />
           </v-col>
 
