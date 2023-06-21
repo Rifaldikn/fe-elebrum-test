@@ -163,7 +163,78 @@ const isChildRouteActive = ({ children }) => {
     </template>
 
     <template #append>
-      <v-avatar color="grey" size="48"></v-avatar>
+      <v-menu offset-y offset="10px" elevation="0">
+        <template v-slot:activator="{ props }">
+          <v-btn icon :ripple="false" class="mx-5">
+            <v-avatar
+              size="48"
+              image="@/assets/images/profile_picture.png"
+              v-bind="props"
+            ></v-avatar>
+          </v-btn>
+        </template>
+        <v-card width="400px" class="pa-7">
+          <v-row>
+            <v-col cols="auto">
+              <v-avatar
+                size="80"
+                image="@/assets/images/profile_picture.png"
+                v-bind="props"
+              ></v-avatar>
+            </v-col>
+            <v-col>
+              <div class="font-weight-bold text-subtitle-2">
+                Muhammad Iqra Djauhari
+              </div>
+              <div class="text-grey text-body-2 my-1">iqra@elabram.com</div>
+              <div>
+                <v-chip size="small" color="blue">Employe</v-chip>
+              </div>
+            </v-col>
+            <v-divider color="grey"></v-divider>
+
+            <v-col cols="12">
+              <v-list-item density="compact" class="pa-0">
+                <template #prepend>
+                  <v-icon color="primary" size="24">mdi-account-outline</v-icon>
+                </template>
+
+                <div class="text-subtitle-2">My Profile</div>
+              </v-list-item>
+            </v-col>
+            <v-divider color="grey"></v-divider>
+
+            <v-col cols="12">
+              <v-list-subheader class="text-grey">Appearance</v-list-subheader>
+              <v-list-item density="compact" class="pa-0">
+                <div class="text-subtitle-2">Dark Mode</div>
+
+                <template #append>
+                  <v-switch
+                    color="blue"
+                    v-model="value"
+                    hide-details
+                    density="compact"
+                    flat
+                    inset
+                  ></v-switch
+                ></template>
+              </v-list-item>
+            </v-col>
+            <v-divider color="grey"></v-divider>
+
+            <v-col cols="12">
+              <v-list-item density="compact" class="pa-0">
+                <template #prepend>
+                  <v-icon color="primary" size="24">mdi-logout-variant</v-icon>
+                </template>
+
+                <div class="text-subtitle-2">Log Out</div>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-menu>
     </template>
   </v-app-bar>
 
